@@ -13,5 +13,9 @@ export const routes: Routes = [
   {
     path: 'about',
     loadComponent: () => import('../app/shared/pages/about-page/about-page.component')
+  },
+  {
+    path: 'contact',
+    loadComponent: () => import('../app/shared/pages/contact-page/contact-page.component')
   }
 ];
