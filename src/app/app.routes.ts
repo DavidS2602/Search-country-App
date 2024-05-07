@@ -3,20 +3,8 @@ import { Routes } from '@angular/router';
 export const routes: Routes = [
   {
     path: '',
-    redirectTo: 'home',
+    redirectTo: 'countries',
     pathMatch: 'full'
-  },
-  {
-    path: 'home',
-    loadComponent: () => import('@shared/pages/home-page/home-page.component')
-  },
-  {
-    path: 'about',
-    loadComponent: () => import('@shared/pages/about-page/about-page.component')
-  },
-  {
-    path: 'contact',
-    loadComponent: () => import('@shared/pages/contact-page/contact-page.component')
   },
   {
     path: 'countries',
@@ -36,6 +24,11 @@ export const routes: Routes = [
       {
         path: 'by/:id',
         loadComponent: () => import('@countries/pages/country-page/country-page.component')
+      },
+      {
+        path: '**',
+        redirectTo: 'by-capital',
+        pathMatch: 'full'
       }
     ]
   }
