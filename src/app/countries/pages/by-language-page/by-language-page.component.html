@@ -1,0 +1,17 @@
+<h2>Por idioma</h2>
+
+<hr>
+<div class="row">
+  <div class="col">
+    <shared-search-box
+      (onValue)="searchByLanguage($event)"
+      placeholder="Buscar por idioma">
+    </shared-search-box>
+  </div>
+</div>
+<hr>
+<div class="row">
+  <div class="col">
+    <countryby-language-table [countries]="countries"></countryby-language-table>
+  </div>
+</div>

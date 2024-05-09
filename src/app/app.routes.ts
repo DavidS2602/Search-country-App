@@ -18,8 +18,8 @@ export const routes: Routes = [
         loadComponent: () => import('@countries/pages/by-region-page/by-region-page.component')
       },
       {
-        path: 'by-country',
-        loadComponent: () => import('@countries/pages/by-country-page/by-country-page.component')
+        path: 'by-language',
+        loadComponent: () => import('@countries/pages/by-language-page/by-language-page.component')
       },
       {
         path: 'by/:id',

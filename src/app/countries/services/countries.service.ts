@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Country } from '@countries/interfaces/country';
+import { Language } from '@countries/interfaces/language';
 import { Region } from '@countries/interfaces/region';
 import { catchError, of } from 'rxjs';
 
@@ -23,6 +24,13 @@ export class CountriesService {
 
   searchRegion(region: string) {
     return this.httpClient.get<Region[]>(`${this.apiUrl}/region/${region}`)
+    .pipe(
+      catchError(() => of([]))
+    )
+  }
+
+  searchLanguage(language: string) {
+    return this.httpClient.get<Language[]>(`${this.apiUrl}/lang/${language}`)
     .pipe(
       catchError(() => of([]))
     )
