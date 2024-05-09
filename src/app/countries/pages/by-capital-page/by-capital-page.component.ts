@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { CountryTableComponent } from '@countries/components/country-table/country-table.component';
+import { CountryTableComponent } from '@countries/pages/by-capital-page/components/country-table/country-table.component';
 import { Country } from '@countries/interfaces/country';
 import { CountriesService } from '@countries/services/countries.service';
 import { SearchBoxComponent } from '@shared/components/search-box/search-box.component';
