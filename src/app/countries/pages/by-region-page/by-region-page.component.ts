@@ -22,6 +22,7 @@ export default class ByRegionPageComponent {
       .subscribe(countries => {
         this.countries = countries
         console.log(countries)
+        
       })
   }
 }
