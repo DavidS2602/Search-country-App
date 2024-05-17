@@ -5,6 +5,7 @@
   <div class="col">
     <shared-search-box
       (onValue)="searchByLanguage($event)"
+      (onDebounce)="searchByLanguage($event)"
       placeholder="Buscar por idioma">
     </shared-search-box>
   </div>
