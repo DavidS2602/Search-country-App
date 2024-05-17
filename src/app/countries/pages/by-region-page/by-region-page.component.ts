@@ -4,6 +4,9 @@ import { SearchBoxComponent } from '@shared/components/search-box/search-box.com
 import { CountryTableComponent } from '../by-capital-page/components/country-table/country-table.component';
 import { Country } from '@countries/interfaces/country';
 
+
+type Region = 'Africa' | 'Americas' | 'Asia' | 'Europe' | 'Oceania';
+
 @Component({
   selector: 'app-by-region-page',
   standalone: true,
@@ -14,13 +17,17 @@ import { Country } from '@countries/interfaces/country';
 export default class ByRegionPageComponent {
 
   public countries: Country[] = [];
+  public regions: Region[] = ['Africa', 'Americas', 'Asia', 'Europe', 'Oceania'];
+  public selectedRegion?: Region;
 
   constructor(private countriesService: CountriesService) {}
 
-  searchByRegion(term: string) {
-    this.countriesService.searchRegion(term)
+  searchByRegion(region: Region) {
+    this.selectedRegion = region
+    this.countriesService.searchRegion(region)
       .subscribe(countries => {
         this.countries = countries
       })
   }
+
 }
