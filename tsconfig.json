@@ -5,6 +5,7 @@
     "paths": {
       "@countries/*": ["./src/app/countries/*"],
       "@shared/*": ["./src/app/shared/*"],
+      "@interfaces/*": ["./src/app/countries/interfaces/*"],
     },
     "outDir": "./dist/out-tsc",
     "strict": true,
